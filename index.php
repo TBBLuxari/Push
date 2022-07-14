@@ -6,7 +6,7 @@
     // Traer Base de datos-----------------------------------------------------------------
     $database = $client->Flutter;
     // Crear o Traer coleccion-----------------------------------------------------------
-    $collection = $database->push;
+    $collection = $database->pusha;
     // Logica de Login -------------------------------------------------------------------------------------
 
     //Variables que necesito -----------
