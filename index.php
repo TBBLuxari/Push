@@ -1,7 +1,4 @@
 <?php 
-    //  (COMPARAR)
-     echo 'Hola we'
-    /*
     header("Access-Control-Allow-Origin: *");
     require_once __DIR__ . '/vendor/autoload.php';
     // Crear Cliente---------------------------------------------------------------------
@@ -18,20 +15,17 @@
     $EstadoActual = $_GET['EstadoActual'];
     //-----------
     $stringCorreo = $Correo;
+    $stringEstadoAnterior = $EstadoAnterior;
+    $stringEstadoActual = $EstadoActual;
     //----------
     $filtroCorreo =['Correo' => $stringCorreo];
+    //$filtroEstadoAnterior = ['EstadoAnterior' => $stringEstadoAnterior];
+    //$filtroEstadoActual = ['EstadoActual' => $stringEstadoActual];
 
-    $filtroEstadoAnterior = ['EstadoAnterior' => $EstadoAnterior];
-    $filtroEstadoActual = ['EstadoActual' => $EstadoActual];
-
-    $update1 = ['$set'=>['EstadoAnterior' => $EstadoAnterior]]
-    $update2 = ['$set'=>['EstadoActual' => $EstadoActual]]  
- 
-    
+    $update1 = ['$set'=>['EstadoAnterior' => $EstadoAnterior ,'EstadoActual' => $EstadoActual]];
    
     // $filtro = ['CORREO' => $CorreoUnity];
     //$update = ['$set' => ['PUNTAJE' => intval($PuntajeUnity) , 'INTENTO' => $TiempoUnity]];
-
     // $Actualizar = $collection2->updateOne($filtro,$update);
 
     $CORREO = $collection->findOne($filtroCorreo);
@@ -46,9 +40,7 @@
             if( $stringCorreo == $datosCorreo->Correo)
             {
                 //Update de los Estados   
-                $updateResult1 = $collection->updateOne($filtroEstadoAnterior, $update1);
-                $updateResult2 = $collection->updateOne($filtroEstadoActual , $update2);
-                
+                $updateResult1 = $collection->updateOne($filtroCorreo, $update1);              
             }else
             {
                 $var = json_encode(null);
