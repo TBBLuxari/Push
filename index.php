@@ -1,5 +1,7 @@
 <?php 
     //  (COMPARAR)
+     echo 'Hola we'
+    /*
     header("Access-Control-Allow-Origin: *");
     require_once __DIR__ . '/vendor/autoload.php';
     // Crear Cliente---------------------------------------------------------------------
@@ -65,7 +67,7 @@
         die($var);
     }
 
-    
+    */
 ?>
 
 
