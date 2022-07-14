@@ -40,7 +40,8 @@
             if( $stringCorreo == $datosCorreo->Correo)
             {
                 //Update de los Estados   
-                $updateResult1 = $collection->updateOne($filtroCorreo, $update1);              
+                $updateResult1 = $collection->updateOne($filtroCorreo, $update1);
+                echo nl2br("Estamos melos")              
             }else
             {
                 $var = json_encode(null);
