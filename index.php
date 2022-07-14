@@ -22,7 +22,7 @@
     //$filtroEstadoAnterior = ['EstadoAnterior' => $stringEstadoAnterior];
     //$filtroEstadoActual = ['EstadoActual' => $stringEstadoActual];
 
-    $update1 = ['$set'=>['EstadoAnterior' => $EstadoAnterior ,'EstadoActual' => $EstadoActual]];
+    $update1 = ['$set'=>['EstadoAnterior' => intval($EstadoAnterior) ,'EstadoActual' => intval($EstadoActual)]];
    
     // $filtro = ['CORREO' => $CorreoUnity];
     //$update = ['$set' => ['PUNTAJE' => intval($PuntajeUnity) , 'INTENTO' => $TiempoUnity]];
